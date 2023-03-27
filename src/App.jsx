@@ -22,7 +22,6 @@ function App() {
           <img src={nodeLogo} className="logo react" alt="logo" />
         </a>
       </div>
-      <p>Diesel Technician Turned Developer!</p>
     </div>
   );
 }

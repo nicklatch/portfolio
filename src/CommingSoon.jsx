@@ -4,7 +4,9 @@ import "./App.css";
 const ComingSoon = () => {
   return (
     <>
-      <h1>Nick Latcham</h1>
+      <h1 className="bg-gradient-to-r from-gray-700 via-gray-900 to-black">
+        Nick Latcham
+      </h1>
       <h2>Portfolio coming soon!</h2>
 
       <a href="https://github.com/nicklatch">

@@ -1,24 +1,16 @@
 import myUglyFace from "./assets/me.png";
-import "./App.css";
 
 const ComingSoon = () => {
   return (
-    <>
-      <h1 className="bg-gradient-to-r from-gray-700 via-gray-900 to-black">
-        Nick Latcham
-      </h1>
-      <h2>Portfolio coming soon!</h2>
+    <div className="flex-col items-center justify-center">
+      <h1 className="text-2xl font-bold text-center">Nick Latcham</h1>
+      <h2 className=" text-xl text-center">Portfolio coming soon!</h2>
 
-      <a href="https://github.com/nicklatch">
-        <img
-          style={{ borderRadius: "50%", width: "50%", height: "auto" }}
-          src={myUglyFace}
-          alt="my face"
-          className="logo"
-        />
+      <a href="https://github.com/nicklatch" className="self-center">
+        <img src={myUglyFace} alt="my face" className="" />
       </a>
       <h3>Click on my face to see my GitHub!</h3>
-    </>
+    </div>
   );
 };
 

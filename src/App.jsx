@@ -1,32 +1,18 @@
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import nodeLogo from "./assets/nodejs-1.svg";
-import mongoLogo from "./assets/MongoDB_Logo.svg";
-import expressLogo from "./assets/expressjs-icon.svg";
+import CommingSoon from "./components/CommingSoon";
+import TechStack from "./components/TechStack";
 import "./App.css";
-import CommingSoon from "./CommingSoon";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="App">
-      <CommingSoon />
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://mongodb.com" target="_blank">
-          <img src={mongoLogo} className="logo" alt="mongo logo" />
-        </a>
-        <a href="https://expressjs.com" target="_blank">
-          <img src={expressLogo} className="logo" alt="express logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo" alt="React logo" />
-        </a>
-        <a href="https://nodejs.org/en" target="_blank">
-          <img src={nodeLogo} className="logo" alt="nodejs logo" />
-        </a>
+    <div className="flex flex-col min-h-screen max-w-screen p-2 justify-between items-center">
+      <Header />
+      <div className="flex flex-col items-center gap-20">
+        <CommingSoon />
+        <TechStack />
       </div>
+      <Footer />
     </div>
   );
 }

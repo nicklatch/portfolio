@@ -14,7 +14,7 @@ const ComingSoon = () => {
         a good fit for your team?{' '}
         <a
           href='mailto:nick@nicklatcham.dev'
-          className='hover:text-indigo-500 hover:underline hover:decoration-4'
+          className='text-indigo-500 underline decoration-4'
         >
           Let's talk!
         </a>

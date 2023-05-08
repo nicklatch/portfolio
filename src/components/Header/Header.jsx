@@ -1,12 +1,16 @@
-import Swap from "./Swap";
+import Swap from './Swap';
+import LightDarkToggle from './LightDarkToggle';
 
-const Header = () => {
+const Header = ({}) => {
   return (
-    <header className="flex items-center justify-between text-center w-full mt-2.5 mb-5 sm:mb-10">
-      <p className="text-2xl font-bold text-center drop-shadow-lg sm:text-4xl bg-gradient-to-r from-indigo-500 via-fuchsia-500 to-rose-400 text-transparent bg-clip-text">
+    <header className='flex items-center justify-between text-center w-full mt-2.5 mb-5 sm:mb-10'>
+      <p className='text-2xl font-bold text-center drop-shadow-lg sm:text-4xl bg-gradient-to-r from-indigo-500 via-fuchsia-500 to-rose-500 text-transparent bg-clip-text'>
         Nick Latcham
       </p>
-      <Swap />
+      <div className='flex'>
+        <LightDarkToggle />
+        <Swap />
+      </div>
     </header>
   );
 };

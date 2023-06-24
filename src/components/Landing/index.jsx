@@ -1,5 +1,5 @@
 import ComingSoon from '../CommingSoon';
-import TechStack from '../TechStack';
+import TechStack from './TechStack';
 
 const Landing = () => {
   return (

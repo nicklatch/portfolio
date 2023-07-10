@@ -2,6 +2,7 @@ const LightDarkToggle = ({}) => {
   const handle = (event) => {
     const dark = document.querySelector('html');
     dark.classList.toggle('dark');
+    dark.classList.toggle('light');
   };
 
   return (

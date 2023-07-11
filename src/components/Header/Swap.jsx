@@ -24,13 +24,13 @@ const Swap = () => {
         <li className="w-full sm:hover-bordered">
           <Link
             to="/about"
-            className="text-center w-full text-white pl-5 m-auto"
+            className="text-center w-full dark:text-white pl-5 m-auto"
           >
             About
           </Link>
         </li>
         <li className="w-full sm:hover-bordered">
-          <Link to="/projects" className="text-center m-auto text-white">
+          <Link to="/projects" className="text-center m-auto dark:text-white">
             Projects
           </Link>
         </li>

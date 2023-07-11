@@ -4,12 +4,7 @@
 
 :root {
   --color: hsl(220 13.376% 69.216%);
-  --bg-gradient: linear-gradient(
-    0deg in oklab,
-    oklch(35% 0.5 313) -28% -28%,
-    38%,
-    oklch(0% 0 100) 99% 99%
-  );
+  --bg-gradient: linear-gradient(158deg, #000 0%, 67%, #8c00ea 100% 6%);
   --grad-one: oklch(64% 0.53 16);
   --grad-two: oklch(66% 0.64 322);
   --grad-three: oklch(58% 0.51 277);
@@ -32,12 +27,7 @@ html {
 html[class='light'] {
   color: #23252d;
 
-  --bg-gradient: linear-gradient(
-    to bottom left in,
-    oklch(44% 0 0) 0%,
-    18%,
-    oklch(100% 0 0) 100%
-  );
+  --bg-gradient: linear-gradient(to bottom, #fff 0%, 90%, #000 100% 6%);
 
   & .project__card-link {
     color: oklch(58.5% 0.5 277);

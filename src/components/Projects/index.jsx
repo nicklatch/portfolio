@@ -3,14 +3,12 @@ import { projects } from './projectsObj';
 
 const Projects = () => {
   return (
-    <>
+    <div className='projects__container slide_in'>
       <h1 className='page__heading'>Projects</h1>
-      <main className='flex flex-col justify-center items-center text-center'>
-        {projects.map((project) => (
-          <ProjectCard key={project.repo} {...project} />
-        ))}
-      </main>
-    </>
+      {projects.map((project) => (
+        <ProjectCard key={project.repo} {...project} />
+      ))}
+    </div>
   );
 };
 

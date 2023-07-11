@@ -1,16 +1,16 @@
-const LightDarkToggle = ({}) => {
-  const handle = (event) => {
+const LightDarkToggle = () => {
+  const handle = () => {
     const dark = document.querySelector('html');
     dark.classList.toggle('dark');
     dark.classList.toggle('light');
   };
 
   return (
-    <label className='btn-circle swap swap-rotate dark:shadow-inner dark:shadow-indigo-500'>
+    <label className=''>
       <input type='checkbox' onChange={handle} />
 
       <svg
-        className='swap-on fill-yellow-300 w-10 h-10'
+        className=''
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 24 24'
       >
@@ -18,7 +18,7 @@ const LightDarkToggle = ({}) => {
       </svg>
 
       <svg
-        className='swap-off fill-current w-10 h-10'
+        className=''
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 24 24'
       >

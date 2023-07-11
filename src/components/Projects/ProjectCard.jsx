@@ -8,7 +8,7 @@ const ProjectCard = ({ title, screenshot, desc, live, repo }) => {
         <a className='project__card-link' href={live}>
           Live View
         </a>
-        {'  '}
+        {'   |   '}
         <a className='project__card-link' href={repo}>
           Source
         </a>

@@ -1,5 +1,4 @@
 import { Routes, Route, useMatch } from 'react-router-dom';
-import './App.css';
 import Header from './components/Header/Header';
 import Footer from './components/Footer';
 import Landing from './components/Landing';

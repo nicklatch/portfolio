@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import Menu from './Menu';
 
-const Header = ({}) => {
+const Header = () => {
   return (
     <header id='header'>
       <Link to='/'>

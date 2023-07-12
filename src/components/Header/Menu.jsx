@@ -1,25 +1,22 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Menu = () => {
-  const hideToggle = document.getElementById('menu-content');
+  const [menuHidden, setMenuHidden] = useState(true);
+  const menuToggle = menuHidden ? ' hide' : null;
 
   const handleClick = () => {
-    hideToggle.classList.toggle('hide');
+    setMenuHidden(!menuHidden);
   };
 
   return (
     <nav>
-      <button type="button" className="menu__button" onClick={handleClick}>
-        Menu
-      </button>
-      <div className="menu-content hide slide_in" id="menu-content">
-        <Link to="/about" className="">
-          About
-        </Link>
-        <Link to="/projects" className="">
-          Projects
-        </Link>
-      </div>
+      <Link to='/about' className=''>
+        About
+      </Link>
+      <Link to='/projects' className=''>
+        Projects
+      </Link>
     </nav>
   );
 };

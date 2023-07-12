@@ -1,7 +1,9 @@
-const ComingSoon = () => {
+import me from '../../assets/images/me.png';
+
+const LandingInfo = () => {
   return (
-    <div className='comingsoon__container'>
-      <h1 className='gradient-text'>Welcome! I'm Nick</h1>
+    <div className='landing-info__container'>
+      <h1 className=''>Welcome! I'm Nick</h1>
       <p>
         A freelance fullstack developer who works techincal product support by
         day, and builds web things by night. Building performant, accessible,
@@ -13,4 +15,4 @@ const ComingSoon = () => {
   );
 };
 
-export default ComingSoon;
+export default LandingInfo;

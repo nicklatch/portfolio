@@ -1,10 +1,9 @@
 import reactLogo from '../../assets/react.svg';
-import viteLogo from '../../assets/vite.svg';
 import nodeLogo from '../../assets/nodejs-1.svg';
 import mongoLogo from '../../assets/MongoDB_Logo.svg';
 import expressLogo from '../../assets/expressjs-icon.svg';
 
-const logos = [reactLogo, viteLogo, nodeLogo, mongoLogo, expressLogo];
+const logos = [mongoLogo,  expressLogo, reactLogo, nodeLogo,];
 
 const TechStack = () => {
   return (

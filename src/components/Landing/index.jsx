@@ -1,10 +1,10 @@
-import ComingSoon from '../CommingSoon';
+import LandingInfo from './LandingInfo';
 import TechStack from './TechStack';
 
 const Landing = () => {
   return (
     <div className='landing__container'>
-      <ComingSoon />
+      <LandingInfo />
       <TechStack />
     </div>
   );

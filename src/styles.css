@@ -11,6 +11,7 @@
   font-family: var(--font-body);
   color: var(--color);
   background: var(--bg-gradient);
+  background-size: cover;
   height: min-content;
 
   font-synthesis: none;
@@ -23,9 +24,10 @@
   --font-headings: 'IBM Plex Sans', sans-serif;
   --font-body: 'IBM Plex Sans Condensed', sans-serif;
   --font-heading-size-lg: 2.25rem;
+  --link-visited: white;
   --hero-font-size: 2.3rem;
-  --color: hsl(220 13.376% 69.216%);
-  --bg-gradient: linear-gradient(158deg, #000 0%, 67%, #8c00ea 100% 6%);
+  --color: white;
+  --bg-gradient: var(--gradient-8);
   --grad-one: oklch(64% 0.53 16);
   --grad-two: oklch(66% 0.64 322);
   --grad-three: oklch(58% 0.51 277);
@@ -53,58 +55,73 @@
 }
 
 body {
-  max-width: clamp(325px, 100vw, 1280px);
+  max-width: clamp(325px, 100vw, 1080px);
   height: 100%;
   margin: 0 auto;
 }
 
-#root {
+div#root {
   display: grid;
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
   width: 100%;
-  gap: 2rem;
+  gap: 1rem;
   padding: 1rem;
+}
+
+main {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
 }
 
 a {
   text-decoration: unset;
-
-  &:visited {
-    color: unset;
-  }
 }
 
-#header {
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   & .header__name {
     font-size: var(--font-size-fluid-2);
-    background: var(--alt-text-gradient);
+    background: var(--gradient-17);
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
     font-weight: 700;
   }
-}
 
-nav {
-  display: flex;
-  flex-direction: row-reverse;
-}
+  & nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 
-.menu__button {
-  all: unset;
-  outline: solid 4px #8c00ea;
-  padding-inline: 1rem;
-  margin-left: 1ch;
-  border-radius: 1rem;
+    & a {
+      font-size: var(--font-size-fluid-1);
 
-  &:hover {
-      animation: var(--animation-pulse);
+      &:not(:last-child) {
+        margin-inline: 1rem;
+      }
+
+      &:hover {
+        scale: 1.1;
+        font-weight: 500;
+      }
+
+      &:focus {
+        filter: drop-shadow(0 0 2rem black);
+        color: white;
+        font-weight: bolder;
+      }
     }
+  }
+}
+
+img {
+  display: block;
+  width: 100%;
 }
 
 .menu-content {
@@ -113,11 +130,6 @@ nav {
   & > a {
     padding-inline: 0.5ch;
   }
-}
-
-main {
-  display: flex;
-  justify-content: center;
 }
 
 #footer {
@@ -147,36 +159,48 @@ html[class='light'] {
 
 .landing__container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-}
+  margin-block: auto;
+  gap: 2rem;
 
-.comingsoon__container {
-  max-width: 50%;
+  & .landing-info__container {
+    max-width: 100%;
 
-  & h1 {
-    font-size: var(--hero-font-size);
+    & h1 {
+      font-size: var(--font-size-fluid-3);
+      padding-bottom: 1rem;
+      text-align: center;
+      margin-inline: auto;
+    }
+
+    & > p {
+      font-size: 1.25rem;
+      text-align: center;
+      text-wrap: balance;
+    }
   }
 
-  & > p {
-    font-size: 1.25rem;
+  & .techstack {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 180px;
+    gap: 1rem;
   }
-}
-
-.techstack {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: end;
-  align-items: center;
-  max-width: 180px;
-  gap: 1ch;
 }
 
 .techstack__logo {
-  width: clamp(100px, 3rem, 15%);
+  width: 35vw;
   aspect-ratio: 1.5;
   object-fit: contain;
   filter: drop-shadow(0 0 0.5rem black);
+
+  &:first-child {
+    width: 12rem;
+  }
 
   &:is(:hover, :active) {
     filter: drop-shadow(0 0 0.25rem white);
@@ -193,15 +217,15 @@ html[class='light'] {
 
 .project__card-link {
   font-weight: 700;
-  color: var(--grad-three);
+  color: white;
 
   &:hover {
-      scale: 1.1;
-    }
+    scale: 1.1;
+  }
 }
 
 .page__heading {
-  font-size: 2.5rem;
+  font-size: var(--font-size-fluid-3);
   margin-bottom: 1rem;
   font-weight: 700;
   text-align: center;
@@ -213,8 +237,8 @@ html[class='light'] {
   text-align: center;
 
   & h1 {
-      font-size: 2rem;
-    }
+    font-size: 2rem;
+  }
 }
 
 h2.project__card-title {
@@ -232,44 +256,27 @@ img.project__card-screenshot {
 
 .project__card-description > p {
   margin-inline: auto;
+  color: white;
 }
 
 .about__container {
   display: flex;
   flex-direction: column;
   margin-inline: auto;
-}
 
-.about__content {
-  margin-block: auto;
-  margin-inline: auto;
-  text-align: center;
-}
+  & > .about__content {
+    text-align: center;
+    margin: auto;
 
-/* utils */
+    & > h2 {
+      font-size: var(--font-size-fluid-2);
+    }
 
-.gradient-text {
-  background: var(--text-gradient);
-
-  @supports (
-    background:
-      radial-gradient(
-        farthest-corner circle at top right in oklab,
-        oklch(80% 0.4 222) 0%,
-        oklch(35% 0.5 313) 100%
-      )
-  ) {
-    background: radial-gradient(
-      farthest-corner circle at top right in oklab,
-      oklch(80% 0.4 222) 0%,
-      oklch(35% 0.5 313) 100%
-    );
-    -webkit-background-clip: text;
-    color: transparent;
+    & * {
+      font-size: unset;
+      margin: 0 auto;
+    }
   }
-
-  background-clip: text;
-  color: transparent;
 }
 
 .hide {
@@ -282,16 +289,40 @@ img.project__card-screenshot {
 }
 
 /* Media Queries*/
+@media screen and (min-width: 600px) {
+  .landing__container {
+    flex-direction: row;
+    margin-block: auto;
 
-@media (max-width: 375px) {
-  div#room {
-    padding: 2rem;
+    & .landing-info__container {
+      width: 50vw;
+
+      & h1 {
+        font-size: var(--font-size-fluid-3);
+        text-align: left;
+        margin-inline: auto;
+      }
+
+      & p {
+        font-size: var(--font-size-fluid-1);
+        text-align: left;
+      }
+    }
+
+    & .techstack {
+      height: 100%;
+      justify-content: space-between;
+
+      & .techstack__logo {
+        height: auto;
+      }
+    }
   }
 }
 
-@media (max-width: 325px) {
+@media (max-width: 360px) {
   p.header__name {
-    font-size: calc(var(--font-heading-size-lg) - 0.5rem);
+    font-size: var(--font-size-fluid-3);
   }
 
   .comingsoon__container > h1 {

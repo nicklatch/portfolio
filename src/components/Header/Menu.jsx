@@ -9,14 +9,14 @@ const Menu = () => {
 
   return (
     <nav>
-      <button type='button' className='menu__button' onClick={handleClick}>
+      <button type="button" className="menu__button" onClick={handleClick}>
         Menu
       </button>
-      <div className='menu-content hide slide_in' id='menu-content'>
-        <Link to='/about' className=''>
+      <div className="menu-content hide slide_in" id="menu-content">
+        <Link to="/about" className="">
           About
         </Link>
-        <Link to='/projects' className=''>
+        <Link to="/projects" className="">
           Projects
         </Link>
       </div>

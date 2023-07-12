@@ -58,7 +58,7 @@ body {
   margin: 0 auto;
 }
 
-div#root {
+#root {
   display: grid;
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
@@ -69,18 +69,18 @@ div#root {
 
 a {
   text-decoration: unset;
+
+  &:visited {
+    color: unset;
+  }
 }
 
-a:visited {
-  color: unset;
-}
-
-header#header {
+#header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  & p.header__name {
+  & .header__name {
     font-size: var(--font-size-fluid-2);
     background: var(--alt-text-gradient);
     color: transparent;
@@ -90,7 +90,7 @@ header#header {
   }
 }
 
-header > nav {
+nav {
   display: flex;
   flex-direction: row-reverse;
 }
@@ -99,18 +99,19 @@ header > nav {
   all: unset;
   outline: solid 4px #8c00ea;
   padding-inline: 1rem;
+  margin-left: 1ch;
   border-radius: 1rem;
-}
 
-.menu__button:hover {
-  animation: var(--animation-pulse);
+  &:hover {
+      animation: var(--animation-pulse);
+    }
 }
 
 .menu-content {
   display: inline;
 
   & > a {
-    padding-inline: 1rem;
+    padding-inline: 0.5ch;
   }
 }
 
@@ -119,7 +120,7 @@ main {
   justify-content: center;
 }
 
-footer#footer {
+#footer {
   margin-inline: auto;
 }
 
@@ -144,47 +145,43 @@ html[class='light'] {
   }
 }
 
-div.landing__container {
+.landing__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-div.comingsoon__container {
+.comingsoon__container {
   max-width: 50%;
-  /* max-width: clamp(min-content, 50%, max-content); */
-}
 
-div.comingsoon__container > h1 {
-  font-size: var(--hero-font-size);
+  & h1 {
+    font-size: var(--hero-font-size);
+  }
 
-  & + p {
+  & > p {
     font-size: 1.25rem;
   }
 }
 
-div.techstack {
+.techstack {
   display: flex;
   flex-wrap: wrap;
   justify-content: end;
   align-items: center;
   max-width: 180px;
-
-  & :not(:first-child, :last-child) {
-    margin-block: 1rem;
-  }
+  gap: 1ch;
 }
 
-img.techstack__logo {
+.techstack__logo {
   width: clamp(100px, 3rem, 15%);
   aspect-ratio: 1.5;
   object-fit: contain;
   filter: drop-shadow(0 0 0.5rem black);
-}
 
-img.techstack__logo:is(:hover, :active) {
-  filter: drop-shadow(0 0 0.25rem white);
-  transition: filter 0.1s ease-in-out;
+  &:is(:hover, :active) {
+    filter: drop-shadow(0 0 0.25rem white);
+    transition: filter 0.1s ease-in-out;
+  }
 }
 
 .projects__container {
@@ -197,9 +194,10 @@ img.techstack__logo:is(:hover, :active) {
 .project__card-link {
   font-weight: 700;
   color: var(--grad-three);
-}
-.project__card-link:hover {
-  scale: 1.1;
+
+  &:hover {
+      scale: 1.1;
+    }
 }
 
 .page__heading {
@@ -213,10 +211,10 @@ img.techstack__logo:is(:hover, :active) {
 .project__card {
   padding: 1rem;
   text-align: center;
-}
 
-.project__card h1 {
-  font-size: 2rem;
+  & h1 {
+      font-size: 2rem;
+    }
 }
 
 h2.project__card-title {
@@ -296,7 +294,7 @@ img.project__card-screenshot {
     font-size: calc(var(--font-heading-size-lg) - 0.5rem);
   }
 
-  div.comingsoon__container > h1 {
+  .comingsoon__container > h1 {
     font-size: var(--font-size-fluid-3);
 
     & + p {

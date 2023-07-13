@@ -3,7 +3,7 @@ import timeDash from '../../assets/images/fem_timeTrack.png';
 
 export const projects = [
   {
-    title: 'Front End Mentor Challalange - Social Media Dash',
+    title: 'Social Media Dash',
     screenshot: socialDash,
     desc: 'My solution to the Social Media Dash Challange',
     live:
@@ -12,7 +12,7 @@ export const projects = [
       'https://github.com/nicklatch/frontEndMentor/tree/main/social-media-dash',
   },
   {
-    title: 'Front End Mentor Challalange - Time Tracking Dash',
+    title: 'Time Tracking Dash',
     screenshot: timeDash,
     desc: 'My solution to the Time Tracking Dash Challange',
     live: 'https://fementor-time-tracking-dashboard.vercel.app/',

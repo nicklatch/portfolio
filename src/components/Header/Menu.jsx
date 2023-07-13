@@ -1,20 +1,22 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 const Menu = () => {
-  const [menuHidden, setMenuHidden] = useState(true);
-  const menuToggle = menuHidden ? ' hide' : null;
+  const [focused, setFocused] = useState('');
+  const location = useLocation().pathname;
 
-  const handleClick = () => {
-    setMenuHidden(!menuHidden);
-  };
+  useEffect(() => {
+    setFocused(location);
+  }, [location]);
+
+  console.log(focused);
 
   return (
     <nav>
-      <Link to='/about' className=''>
+      <Link to='/about' className={focused === '/about' && 'focused'}>
         About
       </Link>
-      <Link to='/projects' className=''>
+      <Link to='/projects' className={focused === '/projects' && 'focused'}>
         Projects
       </Link>
     </nav>

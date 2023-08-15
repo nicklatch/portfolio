@@ -1,15 +1,9 @@
 <script lang="ts">
 	import type { LayoutData } from './$types';
+	import Header from '../components/Header.svelte';
+	import Footer from '../components/Footer.svelte';
 </script>
 
-<header>
-	<nav>
-		<ul>
-			<li>
-				<a href="/about">About</a>
-			</li>
-		</ul>
-	</nav>
-</header>
+<Header />
 <main><slot /></main>
-<footer>footer</footer>
+<Footer />

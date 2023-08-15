@@ -1,12 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
-		<meta name="viewport" content="width=device-width" />
-		%sveltekit.head%
-	</head>
-	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents">%sveltekit.body%</div>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%sveltekit.assets%/favicon.png" />
+    <meta name="viewport" content="width=device-width" />
+    %sveltekit.head%
+  </head>
+  <body data-sveltekit-preload-data="hover">
+    <div style="display: contents;">%sveltekit.body%</div>
+  </body>
 </html>
+
+<style>
+  html {
+    box-sizing: border-box;
+    height: 100%;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    text-decoration: unset;
+    list-style: none;
+    body {
+      background: black;
+      color: white;
+    }
+  }
+
+  body {
+    margin-inline: auto;
+    padding: 1em;
+    max-width: 1440px;
+    min-height: 100dvh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    place-items: center;
+  }
+
+  a {
+    text-decoration: none;
+
+    &:visited {
+      color: unset;
+    }
+  }
+</style>

@@ -1,2 +1,9 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<p>I make web things<br> accessible<br />and enjoyable for all</p>
+
+<style>
+	p {
+		font-weight: 700;
+		font-size: clamp(2.75em, 4rem, 10vw);
+		text-align: center;
+	}
+</style>

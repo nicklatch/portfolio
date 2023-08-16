@@ -28,10 +28,17 @@
 	}
 
 	li {
-		padding-inline: 1em;
+		padding-inline: 1ch;
+		font-size: clamp(1em, 1vw, 2vw);
 	}
 
 	header > a {
-		font-size: clamp(1.5em, 3vw, 2.5em);
+		font-size: clamp(2rem, 2vw, 4vw);
+		font-weight: 700;
+
+		&:hover {
+			color: transparent;
+			background: linear-gradient(to right, red, orange, purple);
+			background-clip: text;		}
 	}
 </style>

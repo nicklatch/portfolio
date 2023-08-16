@@ -2,4 +2,4 @@
 	import type { PageData } from './$types';
 </script>
 
-<div>about</div>
+<span>projects</span>

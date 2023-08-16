@@ -1,5 +1,10 @@
+<script>
+	import SvelteSvg from './SvelteSVG.svelte';
+</script>
+
 <footer>
-	<a href="/">Nick Latcham | 2023</a>
+	<p>© 2023 Nick Latcham | Made With &nbsp;</p>
+	<iconify-icon icon="logos:svelte" />
 </footer>
 
 <style>
@@ -7,9 +12,14 @@
 		width: 100%;
 		display: flex;
 		justify-content: center;
+		align-items: center;
 	}
 
-	a {
+	p {
 		text-align: center;
+		font-size: clamp(8px, 0.8rem, 1.5rem);
+	}
+
+	@media (max-width: 450) {
 	}
 </style>

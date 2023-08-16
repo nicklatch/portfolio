@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { PageData } from './$types';
+	import Construction from '../../components/Construction.svelte';
 </script>
 
-<div>about</div>
+<Construction />

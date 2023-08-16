@@ -1,9 +1,5 @@
-<script lang="ts">
-	import { onMount } from 'svelte';
-</script>
-
 <header>
-	<a href="/">Nick Latcham</a>
+	<a href="/">&lt;Nick Latcham /&gt;</a>
 	<nav>
 		<ul>
 			<li>
@@ -27,18 +23,47 @@
 		display: flex;
 	}
 
-	li {
-		padding-inline: 1ch;
-		font-size: clamp(1em, 1vw, 2vw);
+	li a {
+		padding-inline: 0.5rem;
+		font-size: clamp(1em, 1.25em, 1vw);
+		color: #ffffff80;
 	}
 
 	header > a {
-		font-size: clamp(2rem, 2vw, 4vw);
+		font-size: clamp(1.5rem, 2.5vw, 3vw);
 		font-weight: 700;
+		padding-inline: 0.5rem;
+	}
 
-		&:hover {
-			color: transparent;
-			background: linear-gradient(to right, red, orange, purple);
-			background-clip: text;		}
+	header > a:hover,
+	a:active {
+		background: linear-gradient(to right, #ff0094 0%, #ffec00 100%);
+		background-clip: text;
+		color: transparent;
+		transition: background ease-in 10s;
+		animation: gradient 5s ease-in-out infinite;
+	}
+
+	header > a:active {
+		transition: ease-in 100ms;
+		scale: 0.99;
+	}
+
+	li a:hover {
+		filter: drop-shadow(0 0 0.25rem white);
+		color: #ffffff;
+		transition: ease-in-out 10ms;
+	}
+
+	@keyframes gradient {
+		0% {
+			background-position: 0 50%;
+		}
+		50% {
+			background-position: 100% 50%;
+		}
+		100% {
+			background-position: 0% 50%;
+		}
 	}
 </style>

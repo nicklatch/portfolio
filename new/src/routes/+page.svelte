@@ -2,13 +2,23 @@
 	import MeDesign from '../components/MeDesign.svelte';
 </script>
 
-<section>
-	<p>Hi, I'm Nick!</p>
-	<p>And I build Web Things<span>&nbsp;_</span></p>
-</section>
-<MeDesign />
+<div>
+	<section>
+		<p>Hi, I'm Nick!</p>
+		<p>And I build Web Things<span>&nbsp;_</span></p>
+	</section>
+	<MeDesign />
+</div>
 
 <style>
+	div {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		padding-block: 3rem;
+	}
 	p:first-child {
 		filter: unset;
 		display: flex;

@@ -28,6 +28,16 @@
 		font-size: clamp(1em, 1.25em, 1vw);
 		color: #ffffff80;
 	}
+	li a:hover,
+	li a:active {
+		filter: drop-shadow(0 0 0.25rem white);
+		color: #ffffff;
+		transition: ease-in-out 10ms;
+	}
+
+	li a:active {
+		filter: drop-shadow(0 0 1rem white);
+	}
 
 	header > a {
 		font-size: clamp(1.5rem, 2.5vw, 3vw);
@@ -40,19 +50,12 @@
 		background: linear-gradient(to right, #ff0094 0%, #ffec00 100%);
 		background-clip: text;
 		color: transparent;
-		transition: background ease-in 10s;
 		animation: gradient 5s ease-in-out infinite;
 	}
 
 	header > a:active {
-		transition: ease-in 100ms;
-		scale: 0.99;
-	}
-
-	li a:hover {
-		filter: drop-shadow(0 0 0.25rem white);
-		color: #ffffff;
-		transition: ease-in-out 10ms;
+		transition: ease-in 10ms;
+		scale: 0.95;
 	}
 
 	@keyframes gradient {

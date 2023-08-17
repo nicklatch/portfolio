@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%sveltekit.assets%/favicon.ico" />
@@ -12,7 +11,6 @@
   <body data-sveltekit-preload-data="hover">
     <div style="display: contents;">%sveltekit.body%</div>
   </body>
-
 </html>
 
 <style>
@@ -26,7 +24,8 @@
 
   *,
   *::before,
-  *::after {
+  *::after,
+  *:visited {
     box-sizing: inherit;
     margin: 0;
     padding: 0;
@@ -38,12 +37,18 @@
     background: black;
     color: white;
     margin-inline: auto;
-    padding-block: 1em;
+    padding: 1em;
     max-width: 1440px;
     min-height: 100dvh;
     display: grid;
     grid-template-rows: auto 1fr auto;
     place-items: center;
+  }
+
+  main {
+    display: grid;
+    place-items: center center;
+    min-height: 100%;
   }
 
   a {

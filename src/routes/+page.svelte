@@ -20,7 +20,6 @@
     padding-block: 3rem;
   }
   p:first-child {
-    filter: unset;
     display: flex;
     flex-direction: column;
     font-weight: 700;

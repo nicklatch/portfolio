@@ -18,6 +18,6 @@
     aspect-ratio: 1;
     width: 100%;
     height: auto;
-    filter: drop-shadow(0 0 1px white);
+    filter: drop-shadow(0 0 0.5px white);
   }
 </style>

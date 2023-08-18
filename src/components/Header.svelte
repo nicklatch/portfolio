@@ -22,39 +22,39 @@
   ul {
     display: flex;
   }
-  header > a:hover,
-  a:active {
-    background: linear-gradient(to right, #ff0094 0%, #ffec00 100%);
-    background-clip: text;
-    color: transparent;
-    animation: gradient 5s ease-in-out infinite;
-  }
-
-  li a {
-    padding-inline: 0.5rem;
-    font-size: clamp(0.85rem, 1.5vw, 1rem);
-    color: #ffffff80;
-  }
-  li a:hover,
-  li a:active {
-    filter: drop-shadow(0 0 0.25rem white);
-    color: #ffffff;
-    transition: ease-in-out 10ms;
-  }
-
-  li a:active {
-    filter: drop-shadow(0 0 1rem white);
-  }
 
   header > a {
     font-size: clamp(1.45rem, 3vw, 2.5rem);
     font-weight: 700;
     padding-inline: 0.5rem;
   }
+  header > a:hover {
+    background: linear-gradient(to right, #ff0094 0%, #ffec00 100%);
+    background-clip: text;
+    color: transparent;
+    transition: all 100ms linear;
+    animation: gradient 1s infinite;
+  }
 
   header > a:active {
-    transition: ease-in 10ms;
-    scale: 0.95;
+    filter: drop-shadow(0 0 0.5rem white);
+    transition: filter linear 1ms;
+  }
+  li a {
+    padding-inline: 0.5rem;
+    font-weight: 500;
+    font-size: clamp(0.85rem, 1.5vw, 1rem);
+    color: #ffffff80;
+    transition: all ease 100ms;
+  }
+  li a:hover {
+    filter: drop-shadow(0 0 0.25rem white);
+    color: #ffffff;
+    transition: all ease 100ms;
+  }
+
+  li a:active {
+    filter: drop-shadow(0 0 1rem white);
   }
 
   @keyframes gradient {

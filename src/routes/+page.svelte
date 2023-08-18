@@ -4,30 +4,32 @@
 
 <div>
   <section>
-    <p>Hi, I'm Nick!</p>
-    <p>And I Build Web Things<span>&nbsp;_</span></p>
+    <div>
+      <h1>Hi, I'm Nick!</h1>
+      <p>And I Build Web Things<span>&nbsp;_</span></p>
+    </div>
   </section>
   <MeDesign />
 </div>
 
 <style>
+  section {
+    display: flex;
+  }
   div {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    padding-block: 3rem;
+    padding-block: clamp(1rem, 3rem, 10vh);
   }
-  p:first-child {
-    display: flex;
-    flex-direction: column;
-    font-weight: 700;
-    font-size: clamp(2.75em, 4rem, 10vw);
+
+  h1 {
     text-align: center;
   }
 
-  p:last-child {
+  p {
     font-size: clamp(2.5em, 3rem, 8vw);
     font-weight: unset;
     text-align: center;

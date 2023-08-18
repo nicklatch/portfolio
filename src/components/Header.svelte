@@ -32,7 +32,7 @@
     background: linear-gradient(to right, #ff0094 0%, #ffec00 100%);
     background-clip: text;
     color: transparent;
-    transition: all 100ms linear;
+    transition: all 250ms linear;
     animation: gradient 1s infinite;
   }
 

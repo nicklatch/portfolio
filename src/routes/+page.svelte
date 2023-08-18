@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import MeDesign from '../components/MeDesign.svelte';
 </script>
 

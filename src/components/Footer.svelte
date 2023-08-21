@@ -3,7 +3,6 @@
 </script>
 
 <footer>
-  <p>8/21&nbsp;</p>
   <p>© 2023 Nick Latcham | Made With &nbsp;</p>
   <SvelteSvg />
 </footer>

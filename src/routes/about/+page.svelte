@@ -83,7 +83,7 @@
       drop-shadow(1.5rem 0.85rem 1rem #ff009490);
   }
 
-  @media screen and (max-width: 800px) {
+  @media (hover: none) {
     div {
       background: linear-gradient(
         330deg,

@@ -1,8 +1,5 @@
 <script lang="ts">
   import { page } from '$app/stores';
-  $: activeUrl = $page.url.pathname;
-
- 
 
   const navLinks: Array<Path> = [
     { name: 'About', path: '/about' },
@@ -16,8 +13,9 @@
     <ul>
       {#each navLinks as navLink}
         <li>
-          <a href={navLink.path} class:active={activeUrl === navLink.path}
-            >{navLink.name}</a
+          <a
+            href={navLink.path}
+            class:active={$page.url.pathname === navLink.path}>{navLink.name}</a
           >
         </li>
       {/each}
@@ -42,8 +40,6 @@
     font-size: clamp(1.45rem, 3vw, 2.5rem);
     font-weight: 700;
     padding-inline: 0.5rem;
-  }
-  header > a:hover {
     background: linear-gradient(to right, #ff0094 0%, #ffec00 100%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -76,19 +72,5 @@
     text-decoration: underline 2px white;
     color: #ffffff;
     transition: all ease 100ms;
-  }
-
-  @media screen and (max-width: 800px) {
-    header > a {
-      background: linear-gradient(to right, #ff0094 0%, #ffec00 100%);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-    header > a:active {
-      filter: drop-shadow(0 0 1.5rem white);
-      transition: all 250ms linear;
-      animation: gradient 1s infinite;
-    }
   }
 </style>

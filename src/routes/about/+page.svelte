@@ -26,13 +26,9 @@
 
 <style>
   img {
-    height: clamp(200px, 20vw, 500px);
-    background-color: black;
-    filter: grayscale();
-  }
-
-  img:hover {
-    filter: unset;
+    aspect-ratio: 1;
+    object-fit: contain;
+    width: clamp(6rem, 75vw, 20rem);
   }
 
   h2 {
@@ -60,44 +56,13 @@
   }
 
   div {
+    overflow: hidden;
     width: fit-content;
     margin: 2rem auto;
     border-radius: 50%;
-    border-right: 4px solid transparent;
-    background: linear-gradient(
-      330deg,
-      transparent 35%,
-      #ffffff95,
-      transparent 90%
-    );
+    border-right: 0.25rem solid white;
+    border-bottom: 0.25rem solid white;
     background-size: 140% 150%;
-    filter: drop-shadow(1.5rem 1.25rem 1rem #32323298)
-      drop-shadow(1.5rem 0.85rem 1rem #ffffff90);
-    overflow: hidden;
     transition: all linear 250ms;
-  }
-  div:hover {
-    background: linear-gradient(330deg, #ffec00 35%, #ff0094, transparent 90%);
-    background-size: 140% 150%;
-    filter: drop-shadow(1.5rem 1.25rem 1rem #ffec0098)
-      drop-shadow(1.5rem 0.85rem 1rem #ff009490);
-  }
-
-  @media (hover: none) {
-    div {
-      background: linear-gradient(
-        330deg,
-        #ffec00 35%,
-        #ff0094,
-        transparent 90%
-      );
-      background-size: 140% 150%;
-      filter: drop-shadow(1.5rem 1.25rem 1rem #ffec0098)
-        drop-shadow(1.5rem 0.85rem 1rem #ff009490);
-    }
-
-    img {
-      filter: unset;
-    }
   }
 </style>

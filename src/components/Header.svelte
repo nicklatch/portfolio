@@ -2,12 +2,9 @@
   import { page } from '$app/stores';
   $: activeUrl = $page.url.pathname;
 
-  interface Path {
-    name: string;
-    path: string;
-  }
+ 
 
-  const navLinks: Path[] = [
+  const navLinks: Array<Path> = [
     { name: 'About', path: '/about' },
     { name: 'Projects', path: '/projects' },
   ];

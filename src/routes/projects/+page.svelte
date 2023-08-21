@@ -1,17 +1,19 @@
 <script lang="ts">
   import ProjectCard from '../../components/ProjectCard.svelte';
+  import type { PageData } from './$types';
+
+  export let data: PageData;
+  console.log(data);
 </script>
 
-<p>
-  Pardon my mess, things are being built here! In the meantime, head on over to
-  my <a href="https://github.com/nicklatch">GitHub!</a>
-</p>
-<div>
-  <ProjectCard />
-</div>
+<section>
+  {#each data.projects as project}
+    <ProjectCard {project} />
+  {/each}
+</section>
 
 <style>
-  div {
+  section {
     padding-block: 5rem;
     height: 100%;
     display: flex;

@@ -1,17 +1,16 @@
-<script>
+<script lang="ts">
+  export let project: Project;
 </script>
 
-<section>
-  <h2>FastLane Fusion</h2>
+<article>
+  <h2>{project.title}</h2>
   <p>
-    FastLane Fusion is an all-in-one race management suite. It makes the process
-    of registration, heat/feature lineup creation, results entry, points
-    allocation, and payouts a breeze!
+    {project.description}
   </p>
-</section>
+</article>
 
 <style>
-  section {
+  article {
     text-align: center;
     max-width: 800px;
   }

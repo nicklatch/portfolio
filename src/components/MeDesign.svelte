@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import src from '$lib/assets/person-working-from-home.png';
 </script>
 

@@ -43,7 +43,7 @@
     background: black;
     color: white;
     max-width: clamp(340px, 100vw, 1440px);
-    min-height: 100dvh;
+    min-height: 100svh;
     display: grid;
     grid-template-rows: auto 1fr auto;
     place-items: center center;

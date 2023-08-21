@@ -22,7 +22,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    padding-block: clamp(1rem, 3rem, 10vh);
+    padding-block: clamp(0.5rem, 1vh, 10dvh);
   }
 
   h1 {
@@ -30,7 +30,7 @@
   }
 
   p {
-    font-size: clamp(2.5em, 3rem, 8vw);
+    font-size: clamp(2.5em, 3rem, 8dvw);
     font-weight: unset;
     text-align: center;
   }

@@ -42,7 +42,7 @@
   }
 
   section {
-    width: clamp(300px, 50vw, 800px);
+    width: clamp(320px, 50vw, 80vw);
     background: linear-gradient(to right, transparent, #ffffff95, transparent);
     border-bottom: 4px solid transparent;
   }

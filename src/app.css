@@ -45,6 +45,10 @@ button {
   font: inherit;
 }
 
+img {
+  display: block;
+}
+
 p,
 h1,
 h2,
@@ -66,7 +70,7 @@ h2 {
 }
 
 p {
-  font-size: clamp(0.85rem, 1.5vw, 1rem);
+  font-size: clamp(1rem, 1.5vw, 1rem);
 }
 
 a {

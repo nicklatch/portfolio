@@ -31,13 +31,14 @@
   header > a:hover {
     background: linear-gradient(to right, #ff0094 0%, #ffec00 100%);
     background-clip: text;
+    -webkit-background-clip: text;
     color: transparent;
     transition: all 250ms linear;
     animation: gradient 1s infinite;
   }
 
   header > a:active {
-    filter: drop-shadow(0 0 0.5rem white);
+    filter: drop-shadow(0 0 1.5rem white);
     transition: filter linear 1ms;
   }
   li a {
@@ -47,8 +48,10 @@
     color: #ffffff80;
     transition: all ease 100ms;
   }
-  li a:hover {
-    filter: drop-shadow(0 0 0.25rem white);
+  li a:hover,
+  li a:active {
+    filter: drop-shadow(0 0.5ch 0.5rem white);
+    text-decoration: underline 2px white;
     color: #ffffff;
     transition: all ease 100ms;
   }
@@ -57,15 +60,15 @@
     filter: drop-shadow(0 0 1rem white);
   }
 
-  @keyframes gradient {
-    0% {
-      background-position: 0 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
+  @media screen and (max-width: 800px) {
+    header > a:focus {
+      filter: drop-shadow(0 0 1.5rem white);
+      background: linear-gradient(to right, #ff0094 0%, #ffec00 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      transition: all 250ms linear;
+      animation: gradient 1s infinite;
     }
   }
 </style>

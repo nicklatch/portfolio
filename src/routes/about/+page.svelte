@@ -1,5 +1,4 @@
 <script lang="ts">
-  import Construction from '../../components/Construction.svelte';
   import me from '$lib/assets/me.png';
 </script>
 
@@ -19,8 +18,8 @@
       and libraries to get the job done.
     </p>
     <p>
-      Outside of work you either find me spending time with my wife, son, and
-      dog; or on the golf course!
+      Outside of work I enjoy golfing and spending time with my wife, son, and
+      dog!
     </p>
   </article>
 </section>
@@ -82,5 +81,23 @@
     background-size: 140% 150%;
     filter: drop-shadow(1.5rem 1.25rem 1rem #ffec0098)
       drop-shadow(1.5rem 0.85rem 1rem #ff009490);
+  }
+
+  @media screen and (max-width: 800px) {
+    div {
+      background: linear-gradient(
+        330deg,
+        #ffec00 35%,
+        #ff0094,
+        transparent 90%
+      );
+      background-size: 140% 150%;
+      filter: drop-shadow(1.5rem 1.25rem 1rem #ffec0098)
+        drop-shadow(1.5rem 0.85rem 1rem #ff009490);
+    }
+
+    img {
+      filter: unset;
+    }
   }
 </style>

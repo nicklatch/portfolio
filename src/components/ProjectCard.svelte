@@ -9,10 +9,6 @@
     allocation, and payouts a breeze!
   </p>
 </section>
-<p>
-  Pardon my mess, things are being built here! In the meantime, head on over to
-  my <a href="https://github.com/nicklatch">GitHub!</a>
-</p>
 
 <style>
   section {
@@ -26,11 +22,5 @@
 
   p {
     text-align: center;
-  }
-
-  a {
-    background: linear-gradient(to right, #ff0094 0%, #ffec00 100%);
-    background-clip: text;
-    color: transparent;
   }
 </style>

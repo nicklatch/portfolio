@@ -3,7 +3,7 @@
 </script>
 
 <div>
-  <img src={me} alt="my face" />
+  <img src={me} alt="Nick Latcham's face" />
 </div>
 <h2>Howdy!</h2>
 <section>
@@ -60,9 +60,8 @@
     width: fit-content;
     margin: 2rem auto;
     border-radius: 50%;
-    border-right: 0.25rem solid white;
-    border-bottom: 0.25rem solid white;
     background-size: 140% 150%;
     transition: all linear 250ms;
+    box-shadow: 1px 1px 1px -1px white;
   }
 </style>

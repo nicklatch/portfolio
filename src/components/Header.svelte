@@ -61,16 +61,13 @@
     transition: all ease 100ms;
   }
   li a:is(:hover, :focused) {
-    filter: drop-shadow(0 0.5ch 0.75rem white);
-    text-decoration: underline 2px white;
+    filter: drop-shadow(0 0 0.75rem white);
     color: #ffffff;
-    transition: all ease 100ms;
   }
 
   .active {
-    filter: drop-shadow(0 0.5ch 0.75rem white);
+    filter: drop-shadow(0 0.5rem 0.75rem white);
     text-decoration: underline 2px white;
     color: #ffffff;
-    transition: all ease 100ms;
   }
 </style>

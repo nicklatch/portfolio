@@ -61,7 +61,6 @@
     margin: 2rem auto;
     border-radius: 50%;
     background-size: 140% 150%;
-    transition: all linear 250ms;
     box-shadow: 1px 1px 1px -1px white;
   }
 </style>

@@ -116,10 +116,6 @@
     :global(body) {
       min-height: 99svh;
     }
-
-    :global(main) {
-      padding-inline: 1rem;
-    }
   }
 
   @supports (

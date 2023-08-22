@@ -5,7 +5,7 @@
     margin: 2rem;
     border: 4px solid rgb(255, 196, 0);
     padding-block: 1rem;
-    padding-inline: 4rem;
+    padding-inline: 2rem;
     border-radius: 1rem;
   }
   p {

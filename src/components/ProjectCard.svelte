@@ -3,8 +3,12 @@
 </script>
 
 <article>
-  <h2>{project.title}</h2>
-  <div class="img_container" />
+  <div>
+    <h2 class="underline">{project.title}</h2>
+    <div class="img_container">
+      <img src={project.screenshot?.src} alt={project.screenshot?.alt} />
+    </div>
+  </div>
   <p>
     {project.description}
   </p>
@@ -14,18 +18,22 @@
   article {
     place-self: center center;
     text-align: center;
-    max-width: 800px;
+    width: fit-content;
   }
 
   h2 {
-    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    margin-inline: auto;
+    width: fit-content;
   }
 
   .img_container {
-    margin: 1rem auto;
-    height: 200px;
-    aspect-ratio: 1.5;
-    outline: 1px solid white;
+    width: clamp(300px, 75%, 600px);
+    margin-bottom: 1em;
+    margin-inline: auto;
+    overflow: hidden;
+    place-self: center center;
+    border-radius: .25rem;
   }
 
   p {

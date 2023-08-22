@@ -4,10 +4,8 @@
   import type { PageData } from './$types';
 
   export let data: PageData;
-  console.log(data);
 </script>
 
-<Construction />
 <section>
   {#each data.projects as project}
     <ProjectCard {project} />
@@ -17,9 +15,7 @@
 <style>
   section {
     margin-inline: auto;
-    padding-block: 5rem;
     height: 100%;
-    width: clamp(320px, 50vw, 80vw);
     display: flex;
     flex-direction: column;
     justify-content: stretch;

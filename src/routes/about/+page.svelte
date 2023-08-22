@@ -1,66 +1,129 @@
 <script lang="ts">
   import me from '$lib/assets/me.png';
+  import Construction from '../../components/Construction.svelte';
+  import ReactSvg from '../../components/ReactSVG.svelte';
+  import Scsssvg from '../../components/SCSSSVG.svelte';
+  import Seperator from '../../components/Seperator.svelte';
+  import TypescriptSvg from '../../components/TypescriptSVG.svelte';
+  import ViteSvg from '../../components/ViteSVG.svelte';
 </script>
 
-<div>
-  <img src={me} alt="Nick Latcham's face" />
-</div>
-<h2>Howdy!</h2>
-<section>
-  <article>
+<Construction />
+<div class="sub-parent__container reverse">
+  <section class="face-container">
+    <img src={me} alt="Nick Latcham's face" class="" />
+  </section>
+  <section class="info-container">
+    <h2 class="underline">Hey There!</h2>
     <p>
       I'm Nick, a former diesel mechanic turned web dev. I have a passion for
       building web apps that solve problems.
     </p>
     <p>
-      I strive to always be using tools the web gives us, such as modern CSS,
-      HTML, and WebAPI's! But, as well know, we still have to reach for tools
-      and libraries to get the job done.
-    </p>
-    <p>
       Outside of work I enjoy golfing and spending time with my wife, son, and
       dog!
     </p>
-  </article>
-</section>
+  </section>
+</div>
+<Seperator />
+<div class="sub-parent__container reverse">
+  <section class="container-half">
+    <h2 class="underline tech-stack__heading">Tech Stack</h2>
+  </section>
+  <section class="container-half icons">
+    <ReactSvg />
+    <TypescriptSvg />
+    <Scsssvg />
+    <ViteSvg />
+  </section>
+</div>
+<Seperator />
 
 <style>
   img {
-    aspect-ratio: 1;
     object-fit: contain;
-    width: clamp(6rem, 75vw, 20rem);
+    filter: drop-shadow(0 0 8px black);
+    margin-inline: auto;
+    position: relative;
+    top: 5px;
+    max-width: 350px;
   }
 
-  h2 {
+  section > h2 {
     text-align: center;
-    padding-block: 1rem;
+    width: fit-content;
+    margin-inline: auto;
+    text-shadow: 0 0 5px var(--bg__color);
   }
 
-  article {
-    background: black;
-    padding: 1rem;
+  .tech-stack__heading {
+    margin: auto;
   }
 
-  section {
-    width: clamp(320px, 50vw, 80vw);
-    background: linear-gradient(to right, transparent, #ffffff95, transparent);
-    border-bottom: 4px solid transparent;
+  .sub-parent__container {
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2vw;
+    margin: 0 auto;
+    padding-inline: 0.5rem;
   }
 
-  p {
+  .container-half {
+    margin-block: auto;
     text-align: center;
+    width: fit-content;
+    max-width: 50%;
+  }
+
+  .reverse {
+    flex-direction: row-reverse;
+  }
+  .face-container {
+    aspect-ratio: 1;
+    overflow: hidden;
+    margin-left: auto;
+    background: var(--gradient);
+    border-radius: 50% 20% / 10% 40%;
+    filter: drop-shadow(0 0 0.5rem var(--shadow__color));
+    border-radius: 40px 6px;
+  }
+
+  .info-container {
+    margin-block: auto;
+    text-align: center;
+    width: 50%;
+    margin-right: auto;
   }
 
   p:not(:first-of-type) {
     padding-top: 1rem;
   }
+  p:first-of-type {
+    padding-top: 1rem;
+  }
 
-  div {
-    overflow: hidden;
-    width: fit-content;
-    margin: 2rem auto;
-    border-radius: 50%;
-    background-size: 140% 150%;
-    box-shadow: 1px 1px 1px -1px white;
+  @media screen and (max-width: 600px) {
+    .sub-parent__container {
+      flex-direction: column;
+    }
+
+    .face-container {
+      width: unset;
+      margin-bottom: 1rem;
+    }
+
+    .info-container {
+      width: unset;
+    }
+
+    .info-container p:last-of-type {
+      margin-bottom: 1rem;
+    }
+
+    .tech-stack__heading {
+      margin-bottom: 1rem;
+    }
   }
 </style>

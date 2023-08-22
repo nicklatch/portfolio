@@ -33,6 +33,7 @@
     font-size: clamp(2.5em, 3rem, 8dvw);
     font-weight: unset;
     text-align: center;
+    text-wrap: balance;
   }
 
   span {

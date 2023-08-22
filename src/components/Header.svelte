@@ -8,15 +8,17 @@
 </script>
 
 <header>
-  <a href="/">&lt;Nick Latcham /&gt;</a>
+  <a href="/" class="header-name normal">&lt;Nick Latcham /&gt;</a>
+  <a href="/" class="header-name small">&lt;NL /&gt;</a>
   <nav>
     <ul>
       {#each navLinks as navLink}
         <li>
           <a
             href={navLink.path}
-            class:active={$page.url.pathname === navLink.path}>{navLink.name}</a
-          >
+            class:active={$page.url.pathname === navLink.path}
+            >{navLink.name}
+          </a>
         </li>
       {/each}
     </ul>
@@ -27,6 +29,7 @@
   header {
     width: 100%;
     margin-top: 0;
+    padding-inline: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,38 +39,58 @@
     display: flex;
   }
 
-  header > a {
+  .header-name {
     font-size: clamp(1.45rem, 3vw, 2.5rem);
     font-weight: 700;
     padding-inline: 0.5rem;
-    background: linear-gradient(to right, #ff0094 0%, #ffec00 100%);
+    background-size: 200% 100%;
+    background: var(--gradient);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    transition: all 250ms linear;
-    animation: gradient 1s infinite;
+    transition: background-size 500ms ease;
+    transition: display linear 1s;
+  }
+
+  .normal {
+    display: inline;
+  }
+
+  .small {
+    display: none;
   }
 
   header > a:active {
-    filter: drop-shadow(0 0 1.5rem white);
-    transition: filter linear 1ms;
+    background-size: 150% 100%;
+    scale: 0.99;
+    transition: scale linear 20ms;
   }
 
   li a {
     padding-inline: 0.5rem;
     font-weight: 700;
     font-size: clamp(0.85rem, 1.5vw, 1rem);
-    color: #ffffff80;
+    opacity: 70%;
     transition: all ease 100ms;
   }
   li a:is(:hover, :focused) {
-    filter: drop-shadow(0 0 0.75rem white);
-    color: #ffffff;
+    filter: drop-shadow(0 0 0.75rem var(--font__color))
+      drop-shadow(0 0 0.1rem var(--bg__color));
+    opacity: 100%;
   }
 
   .active {
-    filter: drop-shadow(0 0.5rem 0.75rem white);
-    text-decoration: underline 2px white;
-    color: #ffffff;
+    text-decoration: 2px underline var(--font__color);
+    opacity: 100%;
+    padding-bottom: 2px;
+  }
+
+  @media screen and (max-width: 376px) {
+    .normal {
+      display: none;
+    }
+    .small {
+      display: unset;
+    }
   }
 </style>

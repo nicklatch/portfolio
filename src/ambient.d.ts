@@ -2,7 +2,12 @@
 declare interface Project {
   title: string;
   description: string;
-  screenshot?: string
+  screenshot?: Screenshot;
+}
+
+declare interface Screenshot {
+  src: string;
+  alt: string;
 }
 
 // Types

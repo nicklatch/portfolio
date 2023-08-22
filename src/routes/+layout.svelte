@@ -25,10 +25,19 @@
 <Footer />
 
 <style>
-  :root {
+  :global(:root) {
     box-sizing: border-box;
-    height: 100%;
     font-family: 'Inter', sans-serif;
+    background: var(--bg__color);
+    color: var(--font__color);
+    --font__color: white;
+    --bg__color: black;
+    --gradient: radial-gradient(
+      farthest-corner circle at 100% 0%,
+      #00dfff 0%,
+      #8c00ea 100%
+    );
+    --shadow__color: #323232;
   }
 
   :global(*, *::before, *::after, *:visited) {
@@ -40,22 +49,20 @@
   }
 
   :global(body) {
-    background: black;
-    color: white;
     max-width: clamp(340px, 100vw, 1440px);
-    min-height: 100svh;
+    min-height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr auto;
     place-items: center center;
     margin-inline: auto;
     padding-block: 0.75rem;
-    padding-inline: 0.5rem;
   }
 
   :global(main) {
     height: 100%;
     margin-inline: auto;
-    padding-block: 1rem;
+    padding-block: 2rem;
+    width: 75%;
   }
 
   :global(input, button) {
@@ -78,15 +85,65 @@
 
   :global(h2) {
     font-weight: 700;
-    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-size: clamp(2rem, 3vw, 3rem);
   }
 
   :global(p) {
-    font-size: clamp(1rem, 1.5vw, 1rem);
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
   }
 
   :global(a) {
     text-decoration: none;
     color: unset;
+  }
+
+  :global(.underline) {
+    background: var(--gradient);
+    background-size: 300% 0.25rem;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    transition: background-size 1s ease;
+  }
+
+  :global(.underline:hover) {
+    background-size: 100% 0.25rem;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+  }
+
+  /* For mobile/touch devices */
+  @media (hover: none) {
+    :global(body) {
+      min-height: 99svh;
+    }
+
+    :global(main) {
+      padding-inline: 1rem;
+    }
+  }
+
+  @supports (
+    background:
+      radial-gradient(
+        farthest-corner circle at 100% 0% in oklab,
+        oklch(80% 0.4 222) 0%,
+        oklch(35% 0.5 313) 33% transparent
+      )
+  ) {
+    :global(:root) {
+      --gradient: radial-gradient(
+        farthest-corner circle at 100% 0% in oklab,
+        oklch(80% 0.4 222) 0%,
+        oklch(35% 0.5 313) 100%
+      );
+    }
+  }
+
+  @media (prefers-color-scheme: light) {
+    :global(:root) {
+      --font__color: black;
+      --bg__color: white;
+      --shadow__color: #32323270;
+    }
   }
 </style>

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import SvelteSvg from './SvelteSVG.svelte';
+  import SvelteSvg from './logoSVG/SvelteSVG.svelte';
 </script>
 
 <footer>

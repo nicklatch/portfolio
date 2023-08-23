@@ -1,11 +1,6 @@
-<script>
-  const measure = 'clamp(3rem, 5vw, 5rem)';
-</script>
-
 <svg
   xmlns="http://www.w3.org/2000/svg"
-  width={measure}
-  height={measure}
+  class="logo-svg"
   viewBox="0 0 32 32"
   {...$$props}
   ><path

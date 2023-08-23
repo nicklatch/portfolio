@@ -1,11 +1,15 @@
 <script lang="ts">
   import me from '$lib/assets/me.png';
   import Construction from '../../components/Construction.svelte';
-  import ReactSvg from '../../components/ReactSVG.svelte';
-  import Scsssvg from '../../components/SCSSSVG.svelte';
+  import ReactSvg from '../../components/logoSVG/ReactSVG.svelte';
+  import Scsssvg from '../../components/logoSVG/SCSSSVG.svelte';
   import Seperator from '../../components/Seperator.svelte';
-  import TypescriptSvg from '../../components/TypescriptSVG.svelte';
-  import ViteSvg from '../../components/ViteSVG.svelte';
+  import TypescriptSvg from '../../components/logoSVG/TypescriptSVG.svelte';
+  import ViteSvg from '../../components/logoSVG/ViteSVG.svelte';
+  import NodeSvg from '../../components/logoSVG/NodeSVG.svelte';
+  import MongoSvg from '../../components/logoSVG/MongoSVG.svelte';
+  import PrismaSvg from '../../components/logoSVG/PrismaSVG.svelte';
+  import BunSvg from '../../components/logoSVG/BunSVG.svelte';
 </script>
 
 <div class="sub-parent__container">
@@ -15,8 +19,8 @@
   <section class="container-half info-container">
     <h2 class="underline">Hey There!</h2>
     <p>
-      I'm Nick, a former diesel mechanic turned web dev. I have a passion for
-      building web apps that solve problems.
+      I'm Nick, a former diesel mechanic turned full-stack web dev. I have a
+      passion for building web apps that solve problems.
     </p>
     <p>
       Outside of work I enjoy golfing and spending time with my wife, son, and
@@ -32,8 +36,11 @@
   <section class="container-half icons">
     <ReactSvg />
     <TypescriptSvg />
-    <Scsssvg />
     <ViteSvg />
+    <NodeSvg />
+    <MongoSvg />
+    <PrismaSvg />
+    <BunSvg />
   </section>
 </div>
 <Seperator />
@@ -41,7 +48,7 @@
 <style>
   img {
     object-fit: contain;
-    filter: drop-shadow(0 0 8px black);
+    filter: drop-shadow(0 0 8px #000000);
     margin-inline: auto;
     position: relative;
     top: 5px;
@@ -53,15 +60,16 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 0 auto;
+    gap: 5vw;
   }
 
   .container-half {
     margin: auto;
     text-align: center;
     width: fit-content;
-    max-width: 25vw;
+    width: clamp(250px, 25vw, 400px);
   }
-  
+
   .container-half > h2 {
     text-align: center;
     width: fit-content;

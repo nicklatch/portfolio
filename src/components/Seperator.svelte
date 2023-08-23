@@ -5,7 +5,12 @@
 
 <style>
   .seperator {
-    padding-block: 3vh;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+  }
+
+  .seperator:last-of-type {
+    padding-bottom: unset;
   }
 
   .seperator__border {
@@ -33,22 +38,18 @@
       transparent
     );
     border-image-slice: 1;
-    background-image: radial-gradient(
-      at top center,
-      #323232,
-      transparent 70%
-    );
+    background-image: radial-gradient(at top center, #323232, transparent 70%);
     height: 3vh;
     margin-top: 0;
   }
 
   @media (prefers-color-scheme: light) {
     .seperator__shadow {
-          background-image: radial-gradient(
-      at top center,
-      var(--shadow__color),
-      transparent 70%
-    );
+      background-image: radial-gradient(
+        at top center,
+        var(--shadow__color),
+        transparent 70%
+      );
     }
   }
 </style>

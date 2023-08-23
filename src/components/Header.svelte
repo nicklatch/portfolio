@@ -27,9 +27,8 @@
 
 <style>
   header {
-    width: 100%;
+    width: 90%;
     margin-top: 0;
-    padding-inline: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -69,7 +68,7 @@
   li a {
     padding-inline: 0.5rem;
     font-weight: 700;
-    font-size: clamp(0.85rem, 1.5vw, 1rem);
+    font-size: clamp(1rem, 1.5vw, 1rem);
     opacity: 70%;
     transition: all ease 100ms;
   }

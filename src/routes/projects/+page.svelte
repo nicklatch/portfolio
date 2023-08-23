@@ -6,26 +6,14 @@
   export let data: PageData;
 </script>
 
-<section>
+<section class="project-parent__container">
   {#each data.projects as project}
     <ProjectCard {project} />
   {/each}
 </section>
 
 <style>
-  section {
-    margin-inline: auto;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: stretch;
-    align-items: center;
-    gap: 5rem;
+  .project-parent__container {
+    margin: auto;
   }
-
-  /* a {
-    background: linear-gradient(to right, #ff0094 0%, #ffec00 100%);
-    background-clip: text;
-    color: transparent;
-  } */
 </style>

@@ -8,12 +8,11 @@
   import ViteSvg from '../../components/ViteSVG.svelte';
 </script>
 
-<Construction />
-<div class="sub-parent__container reverse">
-  <section class="face-container">
+<div class="sub-parent__container">
+  <section class="container-half face-container">
     <img src={me} alt="Nick Latcham's face" class="" />
   </section>
-  <section class="info-container">
+  <section class="container-half info-container">
     <h2 class="underline">Hey There!</h2>
     <p>
       I'm Nick, a former diesel mechanic turned web dev. I have a passion for
@@ -26,7 +25,7 @@
   </section>
 </div>
 <Seperator />
-<div class="sub-parent__container reverse">
+<div class="sub-parent__container">
   <section class="container-half">
     <h2 class="underline tech-stack__heading">Tech Stack</h2>
   </section>
@@ -46,76 +45,53 @@
     margin-inline: auto;
     position: relative;
     top: 5px;
-    max-width: 350px;
+    left: 20px;
   }
 
-  section > h2 {
+  .sub-parent__container {
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+  }
+
+  .container-half {
+    margin: auto;
+    text-align: center;
+    width: fit-content;
+    max-width: 25vw;
+  }
+  
+  .container-half > h2 {
     text-align: center;
     width: fit-content;
     margin-inline: auto;
     text-shadow: 0 0 5px var(--bg__color);
   }
 
-  .tech-stack__heading {
-    margin: auto;
-  }
-
-  .sub-parent__container {
-    height: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2vw;
-    margin: 0 auto;
-    padding-inline: 0.5rem;
-  }
-
-  .container-half {
-    margin-block: auto;
-    text-align: center;
-    width: fit-content;
-    max-width: 50%;
-  }
-
-  .reverse {
-    flex-direction: row-reverse;
-  }
   .face-container {
     aspect-ratio: 1;
     overflow: hidden;
-    margin-left: auto;
     background: var(--gradient);
-    border-radius: 50% 20% / 10% 40%;
     filter: drop-shadow(0 0 0.5rem var(--shadow__color));
     border-radius: 40px 6px;
   }
 
-  .info-container {
-    margin-block: auto;
-    text-align: center;
-    width: 50%;
-    margin-right: auto;
-  }
-
-  p:not(:first-of-type) {
-    padding-top: 1rem;
-  }
-  p:first-of-type {
+  p {
     padding-top: 1rem;
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 630px) {
     .sub-parent__container {
+      display: flex;
       flex-direction: column;
     }
 
-    .face-container {
-      width: unset;
-      margin-bottom: 1rem;
+    .container-half {
+      max-width: unset;
     }
-
-    .info-container {
-      width: unset;
+    .face-container {
+      margin-bottom: 1rem;
     }
 
     .info-container p:last-of-type {

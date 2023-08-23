@@ -59,8 +59,11 @@
   }
 
   :global(main) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
     height: 100%;
-    margin-inline: auto;
     padding-block: 2rem;
     width: 75%;
   }
@@ -112,9 +115,13 @@
   }
 
   /* For mobile/touch devices */
-  @media (hover: none) {
+  @media screen and (max-width: 630px) {
     :global(body) {
       min-height: 99svh;
+    }
+
+    :global(main) {
+      width: 90%;
     }
   }
 

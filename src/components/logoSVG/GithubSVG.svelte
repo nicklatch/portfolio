@@ -13,7 +13,7 @@
 
 <style>
   svg {
-    width: 2vw;
+    width: clamp(1rem, 2vw, 2rem);
   }
 
   .fill__color {

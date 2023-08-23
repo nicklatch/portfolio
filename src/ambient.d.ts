@@ -3,6 +3,8 @@ declare interface Project {
   title: string;
   description: string;
   screenshot?: Screenshot;
+  sourceUrl: string;
+  id: number
 }
 
 declare interface Screenshot {

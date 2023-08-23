@@ -6,15 +6,8 @@
 <style>
   .seperator {
     padding-top: 2vh;
-    padding-bottom: 2vh;
   }
-
-  .seperator:last-of-type {
-    padding-bottom: unset;
-  }
-
   .seperator__border {
-    margin-top: 0.5rem;
     margin-bottom: 0;
     width: 100%;
     height: 2px;
@@ -25,12 +18,12 @@
       transparent
     );
     background-repeat: no-repeat;
-    background-size: 100% 2px;
+    background-size: 100% 2vh;
     background-position: left top;
   }
 
   .seperator__shadow {
-    border-top-width: 2px;
+    border-top-width: 2vh;
     border-image-source: linear-gradient(
       to right,
       transparent,
@@ -39,8 +32,14 @@
     );
     border-image-slice: 1;
     background-image: radial-gradient(at top center, #323232, transparent 70%);
-    height: 3vh;
+    height: 2vh;
     margin-top: 0;
+  }
+
+  @media screen and (max-width: 630px) {
+    .seperator {
+      padding-top: 2vw;
+    }
   }
 
   @media (prefers-color-scheme: light) {

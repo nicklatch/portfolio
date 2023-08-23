@@ -1,8 +1,16 @@
 <script lang="ts">
+  import Seperator from './Seperator.svelte';
+  import GithubSvg from './logoSVG/GithubSVG.svelte';
+
   export let project: Project;
+
+  const projID: Number = project.id;
+
+  $: projectBorder =
+    project.id % 2 === 0 ? 'border-grad-right' : 'border-grad-left';
 </script>
 
-<div class="gradient__border">
+<div class="underline {projectBorder}">
   <section class="project-card__container">
     <div class="grid-half img_container">
       <img src={project.screenshot?.src} alt={project.screenshot?.alt} />
@@ -12,9 +20,11 @@
       <p>
         {project.description}
       </p>
+      <a href={project.sourceUrl}><GithubSvg /></a>
     </article>
   </section>
 </div>
+<Seperator />
 
 <style>
   p {
@@ -29,7 +39,9 @@
     text-align: center;
     width: fit-content;
     padding: clamp(0.5rem, 2vw, 2rem);
-    border-radius: 0.25rem;
+    border-bottom: 4px solid transparent;
+    box-shadow: 4px -2px 2rem var(--bg__color);
+    padding-bottom: 0;
   }
 
   .grid-half {
@@ -47,7 +59,8 @@
 
   .img_container {
     overflow: hidden;
-    filter: drop-shadow(0 0 6px var(--shadow__color));
+    filter: drop-shadow(0 0 1px var(--bg__color))
+      drop-shadow(0 0 6px var(--shadow__color));
   }
 
   .img_container,
@@ -55,14 +68,28 @@
     border-radius: 0.5rem;
   }
 
-  .gradient__border {
-    background-image: none;
-    padding: 0.25rem;
-    border-radius: 0.5rem;
+  :global(.border-grad-right) {
+    border-left: 3px solid;
+    border-image: linear-gradient(
+        0deg,
+        transparent 3%,
+        #00dfff,
+        #8c00ea,
+        transparent 100%
+      )
+      1;
   }
 
-  .gradient__border:hover {
-    background-image: var(--gradient);
+  :global(.border-grad-left) {
+    border-left: 3px solid;
+    border-image: linear-gradient(
+        0deg,
+        transparent 3%,
+        #00dfff,
+        #8c00ea,
+        transparent 100%
+      )
+      1;
   }
 
   @media screen and (max-width: 630px) {

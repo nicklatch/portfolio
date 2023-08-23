@@ -1,8 +1,6 @@
 <script lang="ts">
   import me from '$lib/assets/me.png';
-  import Construction from '../../components/Construction.svelte';
   import ReactSvg from '../../components/logoSVG/ReactSVG.svelte';
-  import Scsssvg from '../../components/logoSVG/SCSSSVG.svelte';
   import Seperator from '../../components/Seperator.svelte';
   import TypescriptSvg from '../../components/logoSVG/TypescriptSVG.svelte';
   import ViteSvg from '../../components/logoSVG/ViteSVG.svelte';
@@ -23,15 +21,22 @@
       passion for building web apps that solve problems.
     </p>
     <p>
-      Outside of work I enjoy golfing and spending time with my wife, son, and
-      dog!
+      Outside of work I enjoy golfing, spending time with my family, and hacking away on side projects. I'm almost always building something!
     </p>
   </section>
 </div>
 <Seperator />
 <div class="sub-parent__container">
   <section class="container-half">
-    <h2 class="underline tech-stack__heading">Tech Stack</h2>
+    <h2 class="underline tech-stack__heading">Skills</h2>
+    <p>
+      I have both back and front-end experince primarily using Typescript. For
+      front-end, I've worked mainly in the React ecosystem. On the flipside, my
+      back-end experience is primarily in Node with Express for REST api's. I'm
+      endlessly curious though and always learning something! Check out the
+      logos as my skill stack includes more than just Node and React, and is
+      always changing.
+    </p>
   </section>
   <section class="container-half icons">
     <ReactSvg />
@@ -60,7 +65,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 0 auto;
-    gap: 5vw;
+    gap: 2vh;
   }
 
   .container-half {
@@ -95,18 +100,14 @@
       flex-direction: column;
     }
 
+    .sub-parent__container:first-of-type {
+      padding-block: 2vh;
+    }
+
     .container-half {
       max-width: unset;
     }
     .face-container {
-      margin-bottom: 1rem;
-    }
-
-    .info-container p:last-of-type {
-      margin-bottom: 1rem;
-    }
-
-    .tech-stack__heading {
       margin-bottom: 1rem;
     }
   }

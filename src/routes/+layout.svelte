@@ -37,6 +37,18 @@
       #00dfff 0%,
       #8c00ea 100%
     );
+    --gradient__linear: linear-gradient(
+        to left,
+        #00dfff,
+        #8c00ea
+      );
+    --gradient__linear-trans: linear-gradient(
+        0deg,
+        transparent 3%,
+        #00dfff,
+        #8c00ea,
+        transparent 100%
+      )
     --shadow__color: #323232;
     --logo__h-w: clamp(3rem, 5vw, 5rem);
   }
@@ -45,7 +57,7 @@
     box-sizing: inherit;
     margin: 0;
     padding: 0;
-    text-decoration: unset;
+    text-decoration: none;
     list-style: none;
   }
 
@@ -98,20 +110,26 @@
   }
 
   :global(a) {
-    text-decoration: none;
     color: unset;
   }
 
   :global(.underline) {
-    background: var(--gradient);
-    background-size: 300% 0.25rem;
+    background: linear-gradient(
+      300deg,
+      transparent 3%,
+      #00dfff,
+      #8c00ea,
+      transparent 100%
+    );
+    background-size: 300% 3px;
     background-repeat: no-repeat;
     background-position: left bottom;
-    transition: background-size 1s ease;
+    transition: background-size 200ms ease-in-out;
   }
 
+
   :global(.underline:hover) {
-    background-size: 100% 0.25rem;
+    background-size: 100% 3px;
     background-repeat: no-repeat;
     background-position: left bottom;
   }
@@ -125,7 +143,7 @@
   }
 
   :global(.logo-svg:hover) {
-    scale: 1.1;
+    scale: 1.01;
     filter: drop-shadow(0.25rem 0 1rem var(--font__color));
   }
 

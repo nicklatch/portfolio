@@ -17,6 +17,7 @@
           <a
             href={navLink.path}
             class:active={$page.url.pathname === navLink.path}
+            class:underline={$page.url.pathname === navLink.path}
             >{navLink.name}
           </a>
         </li>
@@ -36,19 +37,22 @@
 
   ul {
     display: flex;
+    gap: clamp(1ch, 1vw, 2rem);
+    justify-content: space-between;
+    align-items: center;
   }
 
   .header-name {
     font-size: clamp(1.45rem, 3vw, 2.5rem);
     font-weight: 700;
     padding-inline: 0.5rem;
-    background-size: 200% 100%;
-    background: var(--gradient);
+    background: var(--gradient__linear);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    transition: background-size 500ms ease;
-    transition: display linear 1s;
+    background-size: 100% 100%;
+    transition: all 200ms linear;
+    width: fit-content;
   }
 
   .normal {
@@ -59,29 +63,28 @@
     display: none;
   }
 
-  header > a:active {
-    background-size: 150% 100%;
-    scale: 0.99;
-    transition: scale linear 20ms;
+  .header-name:hover {
+    background-size: 180% 200%;
+  }
+  .header-name:active {
+    scale: 0.98;
   }
 
   li a {
-    padding-inline: 0.5rem;
     font-weight: 700;
     font-size: clamp(1rem, 1.5vw, 1rem);
     opacity: 70%;
     transition: all ease 100ms;
   }
-  li a:is(:hover, :focused) {
+  li a:is(:hover, :focused):not(.active) {
     filter: drop-shadow(0 0 0.75rem var(--font__color))
       drop-shadow(0 0 0.1rem var(--bg__color));
     opacity: 100%;
   }
 
   .active {
-    text-decoration: 2px underline var(--font__color);
     opacity: 100%;
-    padding-bottom: 2px;
+    padding-bottom: 1px;
   }
 
   @media screen and (max-width: 376px) {

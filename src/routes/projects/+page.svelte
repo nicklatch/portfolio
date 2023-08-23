@@ -4,6 +4,7 @@
   import type { PageData } from './$types';
 
   export let data: PageData;
+  console.log(data.projects);
 </script>
 
 <section class="project-parent__container">
@@ -13,6 +14,7 @@
 </section>
 
 <style>
+  
   .project-parent__container {
     margin: auto;
   }

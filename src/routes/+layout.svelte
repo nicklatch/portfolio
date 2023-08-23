@@ -53,7 +53,7 @@
     width: clamp(300px, 100vw, 1440px);
     min-height: 100svh;
     margin-inline: auto;
-    padding-block: 1rem;
+    padding-block: 0.5rem;
     display: grid;
     grid-template-rows: auto 1fr auto;
     place-items: center center;
@@ -84,7 +84,7 @@
   }
 
   :global(h1) {
-    font-size: clamp(2.75em, 4rem, 10vw);
+    font-size: clamp(2.5em, 4vw, 3.5vw);
     font-weight: 700;
   }
 
@@ -136,7 +136,7 @@
     }
 
     :global(main) {
-      width: 90%;
+      padding: 1svh;
     }
   }
 

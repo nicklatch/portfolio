@@ -19,10 +19,11 @@
   div {
     height: 100%;
     display: flex;
+    flex: 1 1 auto;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    padding-block: clamp(0.5rem, 1vh, 10dvh);
+    padding-block: clamp(2px, 1svh, 10dvh);
   }
 
   h1 {
@@ -33,7 +34,6 @@
     font-size: clamp(2.5em, 3rem, 8dvw);
     font-weight: unset;
     text-align: center;
-    text-wrap: balance;
   }
 
   span {

@@ -2,6 +2,14 @@
   import MeDesign from '../components/MeDesign.svelte';
 </script>
 
+<svelte:head>
+  <title>Nick Latcham, Full Stack Dev</title>
+  <meta
+    name="description"
+    content="Meet Nick Latcham, a fullstack developer who specializes in building web applications. Learn more about Nick's skills and projects as he creates web experiences that make an impact. Nick is available for hire!"
+  />
+</svelte:head>
+
 <div>
   <section>
     <div>

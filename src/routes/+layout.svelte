@@ -12,7 +12,6 @@
 </script>
 
 <svelte:head>
-  <title>{pageTitle.charAt(0).toUpperCase() + pageTitle.slice(1)}</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link

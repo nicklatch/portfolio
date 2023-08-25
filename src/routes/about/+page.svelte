@@ -10,6 +10,14 @@
   import BunSvg from '../../components/logoSVG/BunSVG.svelte';
 </script>
 
+<svelte:head>
+  <title>About Nick</title>
+  <meta
+    name="description"
+    content="Hey there! I'm Nick, a former diesel mechanic turned passionate full-stack web developer. I specialize in using TypeScript for both front-end and back-end development, with expertise in React and Node.js. Check out my skills and projects to see more about my journey to becoming the best fullstack developer I can be."
+  />
+</svelte:head>
+
 <div class="sub-parent__container">
   <section class="container-half face-container">
     <img src={me} alt="Nick Latcham's face" class="" />
@@ -21,7 +29,8 @@
       passion for building web apps that solve problems.
     </p>
     <p>
-      Outside of work I enjoy golfing, spending time with my family, and hacking away on side projects. I'm almost always building something!
+      Outside of work I enjoy golfing, spending time with my family, and hacking
+      away on side projects. I'm almost always building something!
     </p>
   </section>
 </div>

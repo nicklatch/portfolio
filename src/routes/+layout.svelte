@@ -7,8 +7,7 @@
 
   inject({ mode: dev ? 'development' : 'production' });
 
-  $: pageTitle =
-    $page.url.pathname === '/' ? 'Nick Latcham' : $page.url.pathname.slice(1);
+
 </script>
 
 <svelte:head>

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import GithubSvg from './logoSVG/GithubSVG.svelte';
   import SvelteSvg from './logoSVG/SvelteSVG.svelte';
 </script>
 

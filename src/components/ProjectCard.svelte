@@ -20,7 +20,7 @@
       <p>
         {project.description}
       </p>
-      <a href={project.sourceUrl}><GithubSvg /></a>
+      <a href={project.sourceUrl} target="_blank"><GithubSvg /></a>
     </article>
   </section>
 </div>

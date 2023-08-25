@@ -1,5 +1,6 @@
 <script lang="ts">
   import { page } from '$app/stores';
+  import GithubSvg from './logoSVG/GithubSVG.svelte';
 
   const navLinks: Array<Path> = [
     { name: 'About', path: '/about' },
@@ -22,6 +23,7 @@
           </a>
         </li>
       {/each}
+      <li><a href="https://github.com/nicklatch" target="_blank"><GithubSvg /></a></li>
     </ul>
   </nav>
 </header>

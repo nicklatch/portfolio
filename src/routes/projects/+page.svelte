@@ -1,5 +1,4 @@
 <script lang="ts">
-  import Construction from '../../components/Construction.svelte';
   import ProjectCard from '../../components/ProjectCard.svelte';
   import type { PageData } from './$types';
 

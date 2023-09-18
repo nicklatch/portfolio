@@ -25,8 +25,7 @@
   <section class="container-half info-container">
     <h2 class="underline">Hey There!</h2>
     <p>
-      I'm Nick, a former diesel mechanic turned full-stack web dev. I have a
-      passion for building web apps that solve problems.
+      I'm Nick, a former diesel mechanic turned full-stack web dev. I am currently pursing my B.S in Software Engineering at WGU.
     </p>
     <p>
       Outside of work I enjoy golfing, spending time with my family, and hacking
@@ -39,8 +38,8 @@
   <section class="container-half">
     <h2 class="underline tech-stack__heading">Skills</h2>
     <p>
-      I have both back and front-end experince primarily using Typescript. For
-      front-end, I've worked mainly in the React ecosystem. On the flipside, my
+      I have both back and front-end experience primarily using Typescript. For
+      front-end, I've worked mainly in the React ecosystem. On the flip-side, my
       back-end experience is primarily in Node with Express for REST api's. I'm
       endlessly curious though and always learning something! Check out the
       logos as my skill stack includes more than just Node and React, and is

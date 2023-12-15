@@ -34,14 +34,13 @@
     padding-block: clamp(2px, 1svh, 10dvh);
   }
 
-  h1 {
+  h1, p {
     text-align: center;
   }
 
   p {
     font-size: clamp(2.5em, 3rem, 8dvw);
     font-weight: unset;
-    text-align: center;
   }
 
   span {

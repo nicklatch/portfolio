@@ -12,7 +12,7 @@
   import JavaSvg from '../../components/logoSVG/JavaSVG.svelte';
   import RustSvg from '../../components/logoSVG/RustSVG.svelte';
   import ElmSVG from '../../components/logoSVG/ElmSVG.svelte';
-  import SpringSvg from '../../components/logoSVG/SpringSvg.svelte';
+  import SpringSvg from '../../components/logoSVG/SpringSVG.svelte';
   import PGSVG from '../../components/logoSVG/PGSVG.svelte';
   import Mysqlsvg from '../../components/logoSVG/MYSQLSVG.svelte';
 </script>

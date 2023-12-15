@@ -29,6 +29,7 @@
     font-family: 'Inter', sans-serif;
     background: var(--bg__color);
     color: var(--font__color);
+    line-height: 1.3;
     --font__color: white;
     --bg__color: black;
     --gradient: radial-gradient(

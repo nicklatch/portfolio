@@ -8,6 +8,13 @@
   import MongoSvg from '../../components/logoSVG/MongoSVG.svelte';
   import PrismaSvg from '../../components/logoSVG/PrismaSVG.svelte';
   import BunSvg from '../../components/logoSVG/BunSVG.svelte';
+  import AwsSvg from '../../components/logoSVG/AwsSVG.svelte';
+  import JavaSvg from '../../components/logoSVG/JavaSVG.svelte';
+  import RustSvg from '../../components/logoSVG/RustSVG.svelte';
+  import ElmSVG from '../../components/logoSVG/ElmSVG.svelte';
+  import SpringSvg from '../../components/logoSVG/SpringSvg.svelte';
+  import PGSVG from '../../components/logoSVG/PGSVG.svelte';
+  import Mysqlsvg from '../../components/logoSVG/MYSQLSVG.svelte';
 </script>
 
 <svelte:head>
@@ -25,7 +32,8 @@
   <section class="container-half info-container">
     <h2 class="underline">Hey There!</h2>
     <p>
-      I'm Nick, a former diesel mechanic turned full-stack web dev. I am currently pursing my B.S in Software Engineering at WGU.
+      I'm Nick, a former diesel mechanic turned software engineer. I am
+      currently pursuing my B.S in Software Engineering at WGU.
     </p>
     <p>
       Outside of work I enjoy golfing, spending time with my family, and hacking
@@ -38,22 +46,32 @@
   <section class="container-half">
     <h2 class="underline tech-stack__heading">Skills</h2>
     <p>
-      I have both back and front-end experience primarily using Typescript. For
-      front-end, I've worked mainly in the React ecosystem. On the flip-side, my
-      back-end experience is primarily in Node with Express for REST api's. I'm
-      endlessly curious though and always learning something! Check out the
-      logos as my skill stack includes more than just Node and React, and is
-      always changing.
+      I'm proficient in Java and TypeScript while also dabbling with Rust and
+      Elm. I have experience building web applications using Spring Boot and
+      Express frameworks on the backend, paired with React and other modern
+      front-end tools.
+    </p>
+    <p>
+      I'm always striving to gain knowledge across new languages, frameworks,
+      tools, and development techniques to expand my skills. So, if what you are
+      looking for is not listed or shown, odds are I can pick it up pretty fast!
     </p>
   </section>
   <section class="container-half icons">
-    <ReactSvg />
     <TypescriptSvg />
+    <JavaSvg />
+    <RustSvg />
+    <ElmSVG />
+    <ReactSvg />
     <ViteSvg />
     <NodeSvg />
-    <MongoSvg />
-    <PrismaSvg />
     <BunSvg />
+    <MongoSvg />
+    <PGSVG />
+    <PrismaSvg />
+    <Mysqlsvg />
+    <SpringSvg />
+    <AwsSvg />
   </section>
 </div>
 <Seperator />

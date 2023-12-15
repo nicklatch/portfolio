@@ -141,6 +141,10 @@
     filter: drop-shadow(0 0 1px var(--font__color));
     transition: all linear 100ms;
   }
+  
+  :global(.odd-logo) {
+    padding: 1ch;
+  }
 
   :global(.logo-svg:hover) {
     scale: 1.01;

@@ -33,7 +33,8 @@
       always keeping "mechanical sympathy" in mind. While I primarily focus on
       backend systems, I also enjoy exploring systems programming and any other
       areas that capture my interest. I am currently seeking my next role and am
-      eager to get to work.
+      eager to get to work. If you are interesting in talking, feel free to
+      message me on <a href="https://linkedin.com/in/nick">LinkedIn</a>!
     </p>
     <p>
       Outside of work I enjoy spending time with my wife, our two kids and our
@@ -74,6 +75,10 @@
 <Seperator />
 
 <style>
+  a {
+    text-decoration: underline;
+  }
+
   img {
     object-fit: contain;
     filter: drop-shadow(0 0 8px #000000);

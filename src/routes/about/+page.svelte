@@ -1,20 +1,16 @@
 <script lang="ts">
-  import me from '$lib/assets/me.png';
-  import ReactSvg from '../../components/logoSVG/ReactSVG.svelte';
-  import Seperator from '../../components/Seperator.svelte';
-  import TypescriptSvg from '../../components/logoSVG/TypescriptSVG.svelte';
-  import ViteSvg from '../../components/logoSVG/ViteSVG.svelte';
-  import NodeSvg from '../../components/logoSVG/NodeSVG.svelte';
-  import MongoSvg from '../../components/logoSVG/MongoSVG.svelte';
-  import PrismaSvg from '../../components/logoSVG/PrismaSVG.svelte';
-  import BunSvg from '../../components/logoSVG/BunSVG.svelte';
-  import AwsSvg from '../../components/logoSVG/AwsSVG.svelte';
-  import JavaSvg from '../../components/logoSVG/JavaSVG.svelte';
-  import RustSvg from '../../components/logoSVG/RustSVG.svelte';
-  import ElmSVG from '../../components/logoSVG/ElmSVG.svelte';
-  import SpringSvg from '../../components/logoSVG/SpringSVG.svelte';
-  import PGSVG from '../../components/logoSVG/PGSVG.svelte';
-  import Mysqlsvg from '../../components/logoSVG/MYSQLSVG.svelte';
+  import me from "$lib/assets/me.png";
+  import ReactSvg from "../../components/logoSVG/ReactSVG.svelte";
+  import Seperator from "../../components/Seperator.svelte";
+  import TypescriptSvg from "../../components/logoSVG/TypescriptSVG.svelte";
+  import NodeSvg from "../../components/logoSVG/NodeSVG.svelte";
+  import MongoSvg from "../../components/logoSVG/MongoSVG.svelte";
+  import AwsSvg from "../../components/logoSVG/AwsSVG.svelte";
+  import JavaSvg from "../../components/logoSVG/JavaSVG.svelte";
+  import RustSvg from "../../components/logoSVG/RustSVG.svelte";
+  import SpringSvg from "../../components/logoSVG/SpringSVG.svelte";
+  import PGSVG from "../../components/logoSVG/PGSVG.svelte";
+  import Mysqlsvg from "../../components/logoSVG/MYSQLSVG.svelte";
 </script>
 
 <svelte:head>
@@ -32,12 +28,17 @@
   <section class="container-half info-container">
     <h2 class="underline">Hey There!</h2>
     <p>
-      I'm Nick, a former diesel mechanic turned software engineer. I am
-      currently pursuing my B.S in Software Engineering at WGU.
+      I’m Nick, a former diesel technician who has transitioned into software
+      engineering. I have a passion for writing clean and efficient software,
+      always keeping "mechanical sympathy" in mind. While I primarily focus on
+      backend systems, I also enjoy exploring systems programming and any other
+      areas that capture my interest. I am currently seeking my next role and am
+      eager to get to work.
     </p>
     <p>
-      Outside of work I enjoy golfing, spending time with my family, and hacking
-      away on side projects. I'm almost always building something!
+      Outside of work I enjoy spending time with my wife, our two kids and our
+      goldendoodle, Reggie. When I do get free-time, you will usuaslly find me
+      hacking away on a side project, playing guitar, or golfing!
     </p>
   </section>
 </div>
@@ -47,9 +48,9 @@
     <h2 class="underline tech-stack__heading">Skills</h2>
     <p>
       I'm proficient in Java and TypeScript while also dabbling with Rust and
-      Elm. I have experience building web applications using Spring Boot and
-      Express frameworks on the backend, paired with React and other modern
-      front-end tools.
+      Elixir. I have professional experience building web applications using
+      Spring Boot and Express frameworks on the backend, paired with React and
+      other modern front-end tools.
     </p>
     <p>
       I'm always striving to gain knowledge across new languages, frameworks,
@@ -58,17 +59,13 @@
     </p>
   </section>
   <section class="container-half icons">
-    <TypescriptSvg />
     <JavaSvg />
     <RustSvg />
-    <ElmSVG />
+    <TypescriptSvg />
     <ReactSvg />
-    <ViteSvg />
     <NodeSvg />
-    <BunSvg />
     <MongoSvg />
     <PGSVG />
-    <PrismaSvg />
     <Mysqlsvg />
     <SpringSvg />
     <AwsSvg />
@@ -96,7 +93,6 @@
 
   .container-half {
     margin: auto;
-    text-align: center;
     width: fit-content;
     width: clamp(250px, 25vw, 400px);
   }
@@ -118,6 +114,7 @@
 
   p {
     padding-top: 1rem;
+    line-height: 1.5rem;
   }
 
   @media screen and (max-width: 630px) {

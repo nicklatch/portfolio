@@ -34,7 +34,7 @@
       backend systems, I also enjoy exploring systems programming and any other
       areas that capture my interest. I am currently seeking my next role and am
       eager to get to work. If you are interesting in talking, feel free to
-      message me on <a href="https://linkedin.com/in/nick">LinkedIn</a>!
+      message me on <a href="https://www.linkedin.com/in/nicklatcham">LinkedIn</a>!
     </p>
     <p>
       Outside of work I enjoy spending time with my wife, our two kids and our

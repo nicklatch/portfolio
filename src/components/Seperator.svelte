@@ -1,6 +1,6 @@
 <div class="seperator">
-  <div class="seperator__border" />
-  <div class="seperator__shadow" />
+  <div class="seperator__border"></div>
+  <div class="seperator__shadow"></div>
 </div>
 
 <style>

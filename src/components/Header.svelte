@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { page } from '$app/stores';
+  import { page } from '$app/state';
   import GithubSvg from './logoSVG/GithubSVG.svelte';
 
   const navLinks: Array<Path> = [
@@ -17,8 +17,8 @@
         <li>
           <a
             href={navLink.path}
-            class:active={$page.url.pathname === navLink.path}
-            class:underline={$page.url.pathname === navLink.path}
+            class:active={page.url.pathname === navLink.path}
+            class:underline={page.url.pathname === navLink.path}
             >{navLink.name}
           </a>
         </li>
@@ -78,7 +78,7 @@
     opacity: 70%;
     transition: all ease 100ms;
   }
-  li a:is(:hover, :focused):not(.active) {
+  li a:is(:global(:hover, :focused)):not(.active) {
     filter: drop-shadow(0 0 0.75rem var(--font__color))
       drop-shadow(0 0 0.1rem var(--bg__color));
     opacity: 100%;

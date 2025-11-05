@@ -1,8 +1,16 @@
+<script lang="ts">
+  interface Props {
+    [key: string]: any
+  }
+
+  let { ...props }: Props = $props();
+</script>
+
 <svg
   xmlns="http://www.w3.org/2000/svg"
 class="logo-svg"
   viewBox="0 0 32 32"
-  {...$$props}
+  {...props}
   ><g fill="none"
     ><path
       fill="url(#vscodeIconsFileTypeVite0)"

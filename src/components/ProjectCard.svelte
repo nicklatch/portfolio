@@ -2,12 +2,16 @@
   import Seperator from './Seperator.svelte';
   import GithubSvg from './logoSVG/GithubSVG.svelte';
 
-  export let project: Project;
+  interface Props {
+    project: Project;
+  }
+
+  let { project }: Props = $props();
 
   const projID: Number = project.id;
 
-  $: projectBorder =
-    project.id % 2 === 0 ? 'border-grad-right' : 'border-grad-left';
+  let projectBorder =
+    $derived(project.id % 2 === 0 ? 'border-grad-right' : 'border-grad-left');
 </script>
 
 <div class="underline {projectBorder}">

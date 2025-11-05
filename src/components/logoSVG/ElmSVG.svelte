@@ -1,8 +1,16 @@
+<script lang="ts">
+  interface Props {
+    [key: string]: any
+  }
+
+  let { ...props }: Props = $props();
+</script>
+
 <svg
   xmlns="http://www.w3.org/2000/svg"
   class="logo-svg"
   viewBox="0 0 32 32"
-  {...$$props}
+  {...props}
   ><path fill="#5fb4cb" d="M16 16.768L2.768 30h26.464Z" /><path
     fill="#eea400"
     d="m24.13 23.362l5.87 5.87v-11.74Z"

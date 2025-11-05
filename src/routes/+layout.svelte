@@ -1,13 +1,11 @@
 <script lang="ts">
-  import Header from '../components/Header.svelte';
-  import Footer from '../components/Footer.svelte';
-  import { page } from '$app/stores';
-  import { dev } from '$app/environment';
-  import { inject } from '@vercel/analytics';
+  import Header from "../components/Header.svelte";
+  import Footer from "../components/Footer.svelte";
+  import { page } from "$app/stores";
+  import { dev } from "$app/environment";
+  import { inject } from "@vercel/analytics";
 
-  inject({ mode: dev ? 'development' : 'production' });
-
-
+  inject({ mode: dev ? "development" : "production" });
 </script>
 
 <svelte:head>
@@ -29,7 +27,8 @@
     font-family: 'Inter', sans-serif;
     background: var(--bg__color);
     color: var(--font__color);
-    line-height: 1.3;
+    line-height: 1.5;
+    text-wrap: balance;
     --font__color: white;
     --bg__color: black;
     --gradient: radial-gradient(

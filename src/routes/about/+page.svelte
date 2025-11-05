@@ -4,10 +4,10 @@
   import Seperator from "../../components/Seperator.svelte";
   import TypescriptSvg from "../../components/logoSVG/TypescriptSVG.svelte";
   import NodeSvg from "../../components/logoSVG/NodeSVG.svelte";
-  import MongoSvg from "../../components/logoSVG/MongoSVG.svelte";
+  // import MongoSvg from "../../components/logoSVG/MongoSVG.svelte";
   import AwsSvg from "../../components/logoSVG/AwsSVG.svelte";
   import JavaSvg from "../../components/logoSVG/JavaSVG.svelte";
-  import RustSvg from "../../components/logoSVG/RustSVG.svelte";
+  // import RustSvg from "../../components/logoSVG/RustSVG.svelte";
   import SpringSvg from "../../components/logoSVG/SpringSVG.svelte";
   import PGSVG from "../../components/logoSVG/PGSVG.svelte";
   import Mysqlsvg from "../../components/logoSVG/MYSQLSVG.svelte";
@@ -28,13 +28,16 @@
   <section class="container-half info-container">
     <h2 class="underline">Hey There!</h2>
     <p>
-      I’m Nick, a former diesel technician who has transitioned into software
-      engineering. I have a passion for writing clean and efficient software,
-      always keeping "mechanical sympathy" in mind. While I primarily focus on
-      backend systems, I also enjoy exploring systems programming and any other
-      areas that capture my interest. I am currently seeking my next role and am
-      eager to get to work. If you are interesting in talking, feel free to
-      message me on <a href="https://www.linkedin.com/in/nicklatcham">LinkedIn</a>!
+      I’m Nick, a former diesel technician turned software engineer. In my 2+
+      years as a developer, I have developed a passion for writing clean and
+      efficient code, always keeping "mechanical sympathy" in mind.
+    </p>
+    <p>
+      While I primarily focus on backend systems for web applications, I also
+      enjoy exploring systems programming and any other areas that capture my
+      interest. I am currently seeking my next role and am ready to work ASAP.
+      If you think I would be a great fit for your team, feel free to message me
+      on <a href="https://www.linkedin.com/in/nicklatcham">LinkedIn</a>!
     </p>
     <p>
       Outside of work I enjoy spending time with my wife, our two kids and our
@@ -48,10 +51,12 @@
   <section class="container-half">
     <h2 class="underline tech-stack__heading">Skills</h2>
     <p>
-      I'm proficient in Java and TypeScript while also dabbling with Rust and
-      Elixir. I have professional experience building web applications using
-      Spring Boot and Express frameworks on the backend, paired with React and
-      other modern front-end tools.
+      My professional experince is in Java, PHP, and TypeScript. My most recent
+      role has me working with PHP, Laravel, Inertia, and TailwindCSS.
+      Previously, I had also used the Spring Framework ecosystem of tools,
+      Django, and React. In my own time I like to write Zig, C, and Nim to
+      create everything from CLI tools, to web applications, and everything
+      inbetween.
     </p>
     <p>
       I'm always striving to gain knowledge across new languages, frameworks,
@@ -61,11 +66,11 @@
   </section>
   <section class="container-half icons">
     <JavaSvg />
-    <RustSvg />
+    <!-- <RustSvg /> -->
     <TypescriptSvg />
     <ReactSvg />
     <NodeSvg />
-    <MongoSvg />
+    <!-- <MongoSvg /> -->
     <PGSVG />
     <Mysqlsvg />
     <SpringSvg />
@@ -119,7 +124,6 @@
 
   p {
     padding-top: 1rem;
-    line-height: 1.5rem;
   }
 
   @media screen and (max-width: 630px) {
